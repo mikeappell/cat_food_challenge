@@ -13,6 +13,6 @@ Reverse-growth cats (also known as Benjamin Button cats) grow more youthful as t
 
 The app should calculate how much cat food a Person needs to buy for all their Cats per week.
 
-No need for a database or UI or anything. The deliverable for this exercise is an app that makes the tests pass. You can run the tests by running the command `ruby test.rb` from inside the cat_food directory.
+No need for a database or UI or anything. The deliverable for this exercise is code that makes the tests pass. You can run the tests by running the command `rspec spec/` from inside the cat_food directory. You can install rspec if you don't have it by running 'bundle install', and you can install bundler if you don't have it with `gem install bundler`.
 
 You can change any part of the code, so feel free to add tests, new classes, or change the way I've set things up.
