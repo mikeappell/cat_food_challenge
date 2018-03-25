@@ -1,5 +1,4 @@
 class Person
-
   attr_accessor :cats
 
   def initialize(cats:)

@@ -3,12 +3,10 @@ require './person'
 require './calculator'
 
 RSpec.describe do
-
   let(:result) { Calculator.new(person: person).calculate }
   let(:person) { Person.new(cats: cats) }
 
   context 'tabby age 5 and siamese age 0' do
-
     let(:cats) do
       [
         Cat.new(breed: 'tabby', age: 5),
@@ -22,7 +20,6 @@ RSpec.describe do
   end
 
   context 'tabby age 15 and reverse growth age 15' do
-
     let(:cats) do
       [
         Cat.new(breed: 'reverse_growth', age: 15),
@@ -36,7 +33,6 @@ RSpec.describe do
   end
 
   context 'no cats' do
-
     let(:cats) { [] }
 
     it 'should equal 0' do
