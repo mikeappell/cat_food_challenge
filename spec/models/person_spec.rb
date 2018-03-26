@@ -37,4 +37,41 @@ RSpec.describe do
       expect(result).to eq(0)
     end
   end
+
+  context 'more complex cat combinations' do
+    context 'tabbies (3 and 7), siamese (1, 5 and 11) and benji (5)' do
+      let(:cats) do
+        [
+          Tabby.new(age: 3),
+          Tabby.new(age: 7),
+          Siamese.new(age: 1),
+          Siamese.new(age: 5),
+          Siamese.new(age: 11),
+          BenjaminButton.new(age: 5)
+        ]
+      end
+
+      it 'should equal 45' do
+        expect(result).to eq 45
+      end
+    end
+
+    context 'tabbies (1, 10 and 13), siamese (4 and 9) and benji (5 and 13)' do
+      let(:cats) do
+        [
+          Tabby.new(age: 1),
+          Tabby.new(age: 10),
+          Tabby.new(age: 13),
+          Siamese.new(age: 4),
+          Siamese.new(age: 9),
+          BenjaminButton.new(age: 5),
+          BenjaminButton.new(age: 13)
+        ]
+      end
+
+      it 'should equal 45' do
+        expect(result).to eq 45
+      end
+    end
+  end
 end
