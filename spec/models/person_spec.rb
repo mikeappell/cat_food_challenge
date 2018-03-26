@@ -1,16 +1,14 @@
-require './cat'
-require './person'
-require './calculator'
+require 'spec_helper'
 
 RSpec.describe do
-  let(:result) { Calculator.new(person: person).calculate }
   let(:person) { Person.new(cats: cats) }
+  let(:result) { person.calculate_food_for_all_cats }
 
   context 'tabby age 5 and siamese age 0' do
     let(:cats) do
       [
-        Cat.new(breed: 'tabby', age: 5),
-        Cat.new(breed: 'siamese', age: 0)
+        Tabby.new(age: 5),
+        Siamese.new(age: 0)
       ]
     end
 
@@ -22,8 +20,8 @@ RSpec.describe do
   context 'tabby age 15 and reverse growth age 15' do
     let(:cats) do
       [
-        Cat.new(breed: 'reverse_growth', age: 15),
-        Cat.new(breed: 'tabby',          age: 15)
+        BenjaminButton.new(age: 15),
+        Tabby.new(age: 15)
       ]
     end
 
