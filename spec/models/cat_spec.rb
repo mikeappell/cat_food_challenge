@@ -3,7 +3,7 @@ require 'spec_helper'
 # TODO: Test for negative age
 RSpec.describe "Cat" do
   it "Can't have a negative age" do
-    expect { Cat.new(age: -2) }.to raise_error RuntimeError, /negative ages/
+    expect { Cat.new(age: -2) }.to raise_error RuntimeError, /Negative ages/
   end
 
   describe "#food_per_week" do
