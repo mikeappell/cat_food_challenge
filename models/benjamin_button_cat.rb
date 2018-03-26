@@ -1,6 +1,6 @@
 class BenjaminButton < Cat
   def initialize(age:)
-    super(age: age)
+    super
   end
 
   # Reverse-growth cats (also known as Benjamin Button cats) grow more youthful

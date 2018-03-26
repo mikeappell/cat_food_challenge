@@ -1,6 +1,6 @@
 class Tabby < Cat
   def initialize(age:)
-    super(age: age)
+    super
   end
 
   # Tabby cats need 10 cups per week, minus 1 cup per year of age, to a minimum

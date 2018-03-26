@@ -1,6 +1,6 @@
 class Siamese < Cat
   def initialize(age:)
-    super(age: age)
+    super
   end
 
   # Siamese cats need 20 cups per week, minus 2 cups per year of age,
