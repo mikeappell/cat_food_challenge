@@ -6,6 +6,10 @@ RSpec.describe "Cat" do
     expect { Cat.new(age: -2) }.to raise_error RuntimeError, /Negative ages/
   end
 
+  it "Doesn't allow for ages > 100" do
+    expect { Cat.new(age: 105) }.to raise_error RuntimeError, /are you a god/
+  end
+
   describe "#food_per_week" do
     it "Calculates the proper food per week for a newborn tabby cat" do
       expect(Tabby.new(age: 0).food_per_week).to eq 10
