@@ -11,5 +11,6 @@ I moved all 'Models' into their own subfolder both for classes and for tests. I 
 On some stylistic notes:
  - I don't usually like a blank line present after a class or method definition so I removed a few (note that this isn't something I'd go nitpick-crazy over in an existing codebase, but since I'm the only one working here...)
  - I also tend to prefer using `self.something` where something is a method or instance variable. I usually find `self.age` more readable then just `age`.
+ - Just want to acknowledge that I instinctively began organizing this a bit like a Rails app, moving models to /models, etc.
 
 On a super-small performance point, if this were a Rails app I *might* cache 'food per week' on the Cat model and have it recalculate whenever its age changes. Though admittedly this would be a tiny gain.
